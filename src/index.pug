@@ -5,10 +5,16 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     title Hệ Thống Nha Khoa Smile Up
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Quicksand|Roboto&amp;display=swap" media="all" onload="if(media!='all')media='all'")
     link(rel='stylesheet', href='./css/main.css')
     link(rel='stylesheet', href='./css/index.css')
-  body
+    
+  body.miniMenu
     include common/header
     include services
     include intro
+    include doctors
+    include news
     include common/footer
+    script(src="./js/jquery.js")
+    script(src="./js/main.js")

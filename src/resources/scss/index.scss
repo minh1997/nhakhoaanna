@@ -1,14 +1,30 @@
 body {
     padding-top: 111px;
+    font-family: Roboto;
+}
+.miniMenu {
+    .h-contact {
+        .phone {
+            width: 100%;
+            height: 45px;
+            a {
+                display: flex;
+            }
+            span {
+                display: block;
+            }
+        }
+    }
 }
 .c-header__contact {
     .phone {
         .btn_yellow {
-            display: inline-block;
-            padding: 15px 20px 8px;
+            display: flex;
+            padding: 0 1rem 0 0;
             height: 52px;
             background-color: #ffbe00;
             color: #fff;
+            border-radius: 5px;
 
             .c-icon--phone_white {
                 width: 1.6rem;
@@ -22,16 +38,137 @@ body {
 .c-section {
     &__intro {
         background-color: #fcfdfd;
+        padding-bottom: 3rem;
 
         .c-component {
             margin-top: 8rem;
+        }
+
+        .c-component__wrap {
+            .c-thumbnail {
+                position: relative;
+                .c-thumbnail--4x3 {
+                    z-index: 1;
+                }
+                &::after {
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 2.5rem 0 2.5rem 0;
+                    border: .125rem solid #ffbe00;
+                    position: absolute;
+                    top: -1.5rem;
+                    left: -1.5rem;
+                }
+            }
         }
 
         .description {
             font-family: Roboto;
             font-size: 1.8rem;
             line-height: 2.2rem;
+            color: #757677;
             font-weight: 400;
+        }
+
+        .show-more {
+            max-width: 286px;
+            height: 4rem;
+            background-color: #ffbe00;
+            margin-top: 2.5rem;
+            color: #ffffff;
+            font-family: Roboto;
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            padding: 0.2rem 1.2rem;
+            border-radius: 5px;
+        }
+    }
+
+    &__doctors {
+        padding-bottom: 3.75rem;
+        .cities {
+            text-align: center;
+            margin: auto;
+            font-family: Roboto;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #0e6394;
+            line-height: 40px;
+            margin-bottom: 3rem;
+            display: flex;
+            .city {
+                cursor: pointer;
+                display: inline-block;
+                padding-bottom: 1.5rem;
+                padding: 25px 76px;
+                position: relative;
+                &:first-child {
+                    margin-right: 5rem;
+                }
+                &:last-child {
+                    margin-left: 5rem;
+                }
+                &.active {
+                    &::after {
+                        width: 100%;
+                        background-color: #0e6394;
+                        content: "";
+                        height: 3px;
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+        }
+        .c-item {
+            padding: 0 2.8rem;
+            .c-thumbnail {
+                margin-bottom: 1.5rem;
+            }
+            .c-title {
+                span {
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    line-height: 40px;
+                    text-transform: uppercase;
+                    color: #757677;
+                }
+                p {
+                    font-size: 1.3rem;
+                    color: #0e6394;
+                    font-family: "Roboto - Regular";
+                    text-transform: uppercase;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    &__news {
+        background-color: #fcfdfd;
+        padding-bottom: 3rem;
+        .c-list-item {
+            .c-box-item {
+                display: flex;
+                .c-content-title {
+                    padding-left: 0.8rem;
+                    color: #5d5d5d;
+                    font-size: 1rem;
+                    line-height: 1.2rem;
+                    max-width: 333px;
+                    margin-bottom: 29px;
+
+                    .date {
+                        font-size: 0.8rem;
+                        color: #bebdbd;
+                        font-style: italic;
+                    }
+                }
+            }
         }
     }
 }
