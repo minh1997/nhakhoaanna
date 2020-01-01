@@ -1,0 +1,33 @@
+body {
+  padding-top: 111px;
+}
+
+.c-header__contact .phone .btn_yellow {
+  display: inline-block;
+  padding: 15px 20px 8px;
+  height: 52px;
+  background-color: #ffbe00;
+  color: #fff;
+}
+
+.c-header__contact .phone .btn_yellow .c-icon--phone_white {
+  width: 1.6rem;
+  height: 1.8rem;
+  background: url(/images/icon/phone.png) no-repeat center;
+}
+
+.c-section__intro {
+  background-color: #fcfdfd;
+}
+
+.c-section__intro .c-component {
+  margin-top: 8rem;
+}
+
+.c-section__intro .description {
+  font-family: Roboto;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  font-weight: 400;
+}
+
