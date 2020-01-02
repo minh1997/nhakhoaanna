@@ -147,7 +147,7 @@ body {
 .c-section__doctors .c-item .c-title p {
   font-size: 1.3rem;
   color: #0e6394;
-  font-family: "Roboto - Regular";
+  font-family: Roboto;
   text-transform: uppercase;
   font-weight: 500;
 }
