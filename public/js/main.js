@@ -6151,29 +6151,8 @@ var DHT = {};
     }
   };
 
-  var doAjax = function doAjax(item) {
-    if (item.length) {
-      var _dht_config = dht_config,
-          admin_ajax = _dht_config.admin_ajax,
-          post_id = _dht_config.post_id,
-          post_type = _dht_config.post_type;
-      $.ajax({
-        method: "GET",
-        url: admin_ajax,
-        data: {
-          action: item.attr("id"),
-          post_id: post_id,
-          post_type: post_type
-        }
-      }).success(function (res) {
-        item.html(res.data);
-      });
-    }
-  };
-
   var dhtLoadRelatedPost = function dhtLoadRelatedPost(parent) {
     parent.forEach(function (item) {
-      doAjax(item);
     });
   };
 
@@ -6818,72 +6797,3 @@ var OlGoogleMap = (function(){
     }
     return mod;
 })();
-OlGoogleMap.init();
-(function($){
-var anaAjaxComment = (function(){
-  var $form;
-  var mod = {};
-  var ajax_url = dht_config.admin_ajax;
-  mod.init = function(){
-    $form = $('#commentform');
-    if($form.length == 0 || typeof dht_config === 'undefined'){ return false;}
-    listener();
-  }
-  var listener = function(){
-    $form.on('availableSubmit',sendRequest);
-    $form.on('submit',handleSubmit);
-  }
-  var handleSubmit = function(ev){
-    ev.preventDefault();
-    return true;
-  }
-  var sendRequest = function(){
-    beforeRequest();
-    var data = $form.serialize();
-    data += '&action=dht_send_comment';
-    $.ajax({
-      url: ajax_url,
-      type: 'post',
-      data: data,
-    })
-    .done(function(res) {
-      if(typeof res !== 'object'){
-        res = JSON.parse(res);
-      }
-      if(res.error){
-        showError(res.message);
-        return false;
-      }
-      doneRequest();
-      return;
-    })
-    .fail(function(jqXHR, textStatus, errorThrown) {
-      console.log('error comment');
-    })
-    .always(function() {
-      afterRequest();
-    });    
-  }
-  var showError = function(msg){
-    $form.append('<div class="error-form">'+msg+'</div>');
-  }
-  var doneRequest = function(){
-    $form.append('<p class="success-form">Gá»­i bÃ¬nh luáº­n thÃ nh cÃ´ng</p>');
-    $form[0].reset();
-  }
-  var beforeRequest = function(){
-    $('body').css('cursor','wait');
-    $form.find('button').attr('disabled','disabled');
-    $form.children('.error-form').remove();
-    $form.children('.success-form').remove();
-  }
-  var afterRequest = function(){
-    $('body').css('cursor','default');
-    $form.find('button').removeAttr('disabled');
-  }  
-  return mod;
-})();  
- $(function(){
-  anaAjaxComment.init();
- }); 
-})(jQuery);
