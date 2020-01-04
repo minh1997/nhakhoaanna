@@ -98,12 +98,21 @@ body {
             line-height: 40px;
             margin-bottom: 3rem;
             display: flex;
+            @media (max-width: 600px) {
+                display: block;
+                width: 100%;
+            }
             .city {
                 cursor: pointer;
                 display: inline-block;
                 padding-bottom: 1.5rem;
                 padding: 25px 76px;
                 position: relative;
+                @media (max-width: 600px) {
+                    width: 50%;
+                    display: inline;
+                    padding: 10px 26px;
+                }
                 &:first-child {
                     margin-right: 5rem;
                 }
@@ -126,6 +135,7 @@ body {
         }
         .c-item {
             padding: 0 2.8rem;
+            margin-bottom: 1.65rem;
             .c-thumbnail {
                 margin-bottom: 1.5rem;
             }
@@ -136,6 +146,9 @@ body {
                     line-height: 40px;
                     text-transform: uppercase;
                     color: #757677;
+                    @media (max-width: 600px) {
+                        line-height: 1.6rem;
+                    }
                 }
                 p {
                     font-size: 1.3rem;
@@ -143,6 +156,9 @@ body {
                     font-family: Roboto;
                     text-transform: uppercase;
                     font-weight: 500;
+                    @media (max-width: 600px) {
+                        font-size: 1.8rem;
+                    }
                 }
             }
         }
@@ -168,6 +184,17 @@ body {
                         font-style: italic;
                     }
                 }
+            }
+        }
+    }
+}
+
+.c-list {
+    &__button {
+        .c-btn {
+            img {
+                width: 2.375rem;
+                height: 2.375rem;
             }
         }
     }

@@ -100,12 +100,27 @@ body {
   display: flex;
 }
 
+@media (max-width: 600px) {
+  .c-section__doctors .cities {
+    display: block;
+    width: 100%;
+  }
+}
+
 .c-section__doctors .cities .city {
   cursor: pointer;
   display: inline-block;
   padding-bottom: 1.5rem;
   padding: 25px 76px;
   position: relative;
+}
+
+@media (max-width: 600px) {
+  .c-section__doctors .cities .city {
+    width: 50%;
+    display: inline;
+    padding: 10px 26px;
+  }
 }
 
 .c-section__doctors .cities .city:first-child {
@@ -130,6 +145,7 @@ body {
 
 .c-section__doctors .c-item {
   padding: 0 2.8rem;
+  margin-bottom: 1.65rem;
 }
 
 .c-section__doctors .c-item .c-thumbnail {
@@ -144,12 +160,24 @@ body {
   color: #757677;
 }
 
+@media (max-width: 600px) {
+  .c-section__doctors .c-item .c-title span {
+    line-height: 1.6rem;
+  }
+}
+
 .c-section__doctors .c-item .c-title p {
   font-size: 1.3rem;
   color: #0e6394;
   font-family: Roboto;
   text-transform: uppercase;
   font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .c-section__doctors .c-item .c-title p {
+    font-size: 1.8rem;
+  }
 }
 
 .c-section__news {
@@ -175,5 +203,10 @@ body {
   font-size: 0.8rem;
   color: #bebdbd;
   font-style: italic;
+}
+
+.c-list__button .c-btn img {
+  width: 2.375rem;
+  height: 2.375rem;
 }
 
