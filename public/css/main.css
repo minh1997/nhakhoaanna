@@ -1660,7 +1660,7 @@ body.compensate-for-scrollbar {
 .c-icon__star--n {
 	width: 1.3125rem;
 	height: 1.25rem;
-	background-image: url(https://nhakhoaanna.com/wp-content/themes/dht-theme/assets/css/../images/star-f.png);
+	background-image: url(/images/star-f.png);
 	background-size: 1.3125rem, 1.25rem
 }
 
@@ -6712,7 +6712,7 @@ li>ul {
 	content: "";
 	width: 2.5625rem;
 	height: 2.375rem;
-	background-image: url(https://nhakhoaanna.com/wp-content/themes/dht-theme/assets/css/../images/quote.png);
+	background-image: url(/images/quote.png);
 	position: absolute;
 	background-size: contain
 }
