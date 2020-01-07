@@ -69,6 +69,7 @@ body {
             line-height: 2.2rem;
             color: #757677;
             font-weight: 400;
+            text-align: left;
         }
 
         .show-more {
@@ -83,6 +84,11 @@ body {
             text-align: center;
             padding: 0.2rem 1.2rem;
             border-radius: 5px;
+
+            @media (max-width: 600px) {
+                padding: 1.2rem 3rem;
+                height: initial;
+            }
         }
     }
 
@@ -167,21 +173,79 @@ body {
     &__news {
         background-color: #fcfdfd;
         padding-bottom: 3rem;
+        .tabs {
+            width: 100%;
+            @media (max-width: 600px) {
+                display: flex !important;
+            }
+            .c-item {
+                @media (max-width: 600px) {
+                    width: 33% !important;
+                    text-align: center;
+                }
+                a {
+                    text-transform: uppercase;
+                    color: #0e6394;
+                    font-size: 3vw;
+                    font-weight: 500;
+                    margin-top: 3rem;
+                    margin-bottom: 3rem;
+                }
+            }
+        }
         .c-list-item {
             .c-box-item {
+                margin-bottom: 29px;
                 display: flex;
+                a {
+                    display: flex;
+                }
+                .c-thumbnail {
+                    min-width: 58px;
+                    max-width: 58px;
+                }
                 .c-content-title {
                     padding-left: 0.8rem;
                     color: #5d5d5d;
-                    font-size: 1rem;
-                    line-height: 1.2rem;
+                    font-size: 0.8vw;
+                    line-height: 1vw;
                     max-width: 333px;
-                    margin-bottom: 29px;
+
+                    @media (max-width: 1024px) {
+                        font-size: 1vh;
+                        line-height: 1.5vh;
+                        max-width: initial;
+                    }
+
+                    @media (max-width: 600px) {
+                        font-size: 1.4vh;
+                        line-height: 1.8vh;
+                    }
+
+                    @media (max-width: 400px) {
+                        font-size: 1.8vh;
+                        line-height: 2vh;
+                    }
 
                     .date {
-                        font-size: 0.8rem;
+                        font-size: 0.6vw;
                         color: #bebdbd;
                         font-style: italic;
+
+                        @media (max-width: 1024px) {
+                            font-size: 1vh;
+                            line-height: 1vh;
+                        }
+
+                        @media (max-width: 600px) {
+                            font-size: 1vh;
+                            line-height: 1vh;
+                        }
+
+                        @media (max-width: 400px) {
+                            font-size: 1.2vh;
+                            line-height: 1vh;
+                        }
                     }
                 }
             }
@@ -197,5 +261,10 @@ body {
                 height: 2.375rem;
             }
         }
+    }
+}
+@media (max-width: 600px) {
+    .c-component__left {
+        text-align: center;
     }
 }
